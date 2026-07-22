@@ -15,10 +15,10 @@ void SPI_Delay(void){
 		for(j=0; j<1275; j++);
 	}
 }
-void SPI_Tx(unsigned char data){
+void SPI_Tx(unsigned char txdata){
 	unsigned char i=0;
 	while(i<8){
-		if(data&0x80){
+		if(txdata&0x80){
 			MOSI=1;
 		}
 		else{
@@ -28,7 +28,7 @@ void SPI_Tx(unsigned char data){
 		SCK=1;
 		SPI_Delay();
 		SCK=0;
-		data=data<<1;
+		txdata=txdata<<1;
 		i++;
 	}
 }
