@@ -21,7 +21,7 @@ void main(void){
 	EA=1;
 	EX0=1;
 	ET0=1;
-	TR1=0;
+	TR0=0;
 	while(1){
 	}
 }
